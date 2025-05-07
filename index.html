@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  
+  <title>Frontend Mentor | Tip Calculator App</title>
+</head>
+<body>
+  <main>
+
+    <!-- Logo -->
+    <section class="logo">
+      <img src="images/logo.svg" alt="Splitter logo" />
+    </section>
+
+    <!-- Main calculator container -->
+    <section class="container">
+      <div class="calculator-container">
+
+        <!-- Input Section -->
+        <div class="input-section">
+
+          <!-- Bill Input -->
+          <div class="bill-entry">
+            <h2>Bill</h2>
+              <div class="input-wrapper">
+                  <img src="images/icon-dollar.svg" alt="image of a current dollar" />
+                  <input id="bill" type="numeric" placeholder="0" min="0" />
+              </div>
+          </div>
+
+          <!-- Tip Selection -->
+          <div class="tip-selection">
+            <p>Select Tip %</p>
+            <div class="tip-container">
+              <input class="tip-input" value="5%">
+              <input class="tip-input" value="10%">
+              <input class="tip-input" value="15%">
+              <input class="tip-input" value="25%">
+              <input class="tip-input" value="50%">
+              <input class="tip-input remove-green-background" placeholder="custom">
+            </div>
+          </div>
+
+          <!-- Number of People -->
+          <div class="number-of-people-container">
+            <p>Number of People</p>
+            <div class="input-wrapper">
+              <img src="images/icon-person.svg" alt="Person icon" />
+              <input id="people" type="numeric" placeholder="5" min="1" />
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Output Section -->
+        <div class="output-container">
+          <div class="totals">
+        
+            <!-- Tip Amount -->
+            <div class="amount">
+              <h2>Tip Amount <span id="tip-output">$0.00</span></h2>
+              <p>/ person</p>
+            </div>
+        
+            <!-- Total Amount -->
+            <div class="amount">
+              <h2>Total <span id="total-output">$0.00</span></h2>
+              <p>/ person</p>
+              <button class="reset-btn" onclick="resetOutput()">Reset</button>
+            </div>
+        
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Attribution -->
+    <footer class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Ricky Phillips</a>.
+    </footer>
+
+    <script src="scripts/TipCalculator.js"></script>
+  </main>
+</body>
+</html>

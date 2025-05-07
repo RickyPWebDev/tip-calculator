@@ -1,0 +1,299 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: "Space Mono", monospace;
+    background-color: #d5eedd;
+    font-size: 16px;
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    letter-spacing: 0.5px;
+    padding: 0 10px; /* Add horizontal padding for smaller screens */
+    box-sizing: border-box;
+}
+
+
+/* Center the logo */
+.logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+/* Main card container */
+.container {
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 30px;
+    width: 720px;
+    max-width: 100%; /* Ensures it doesn’t overflow on smaller devices */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Ensures internal content is centered */
+}
+
+.bill-entry h2{
+    color:hsl(186, 14%, 43%);
+    font-size:18px;
+}
+
+.tip-selection p {
+    color:hsl(186, 14%, 43%);
+    font-size:12px;
+    font-weight:bold;
+}
+/* Bill input */
+.bill-entry input {
+    width: 100%;
+    background-color: hsl(189, 41%, 97%);
+    padding: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    color: hsl(183, 100%, 15%);
+    text-align: right;
+}
+
+/* Placeholder text */
+input::placeholder {
+    font-size: 18px;
+    padding-right: 5px;
+}
+
+/* Tip selection grid */
+.tip-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+/* Tip buttons */
+.tip-container > input{
+    background-color: hsl(183, 100%, 15%);
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    padding: 10px 0;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    width:100px;
+    text-align:center;
+}
+
+.tip-container > input:hover {
+    background-color: hsl(172, 67%, 45%);
+}
+
+.tip-container > input.remove-green-background {
+    background-color: hsl(189, 47%, 97%);
+    color: hsl(183, 100%, 15%);
+}
+
+.tip-container > input.remove-green-background:hover {
+    border: solid 2px hsl(172, 67%, 45%);
+}
+
+/* Calculator layout */
+.calculator-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.input-section, .output-container {
+    flex: 1;
+    min-width: 300px;
+}
+
+/* Number of people */
+.number-of-people-container {
+    margin-top: 30px;
+}
+
+.number-of-people-container p {
+    font-size: 0.9rem;
+    color:hsl(186, 14%, 43%);
+    font-size:12px;
+    font-weight:bold;
+    margin-bottom: 10px;
+   
+}
+
+/* Input wrapper */
+.input-wrapper {
+    background-color: hsl(189, 41%, 97%);
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    gap: 0.5rem;
+}
+
+.input-wrapper input {
+    border: none;
+    background: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: hsl(183, 100%, 15%);
+    width: 100%;
+    text-align: right;
+}
+
+/* Output section */
+.output-container {
+    background-color: hsl(183, 100%, 15%);
+    color: white;
+    border-radius: 15px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.output-container .totals {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.amount h2 {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+}
+
+.amount span {
+    font-size: 2rem;
+    color: hsl(172, 67%, 45%);
+}
+
+.amount p {
+    font-size: 0.8rem;
+    color: hsl(186, 14%, 43%);
+    margin-top: 5px;
+}
+
+/* Reset button */
+.reset-btn {
+    width: 100%;
+    padding: 1rem;
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+    font-weight: bold;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top:50px;
+}
+
+.reset-btn:hover {
+    background-color: hsl(185, 41%, 84%);
+}
+
+
+.attribution {
+    text-align:center;
+    font-size:10px;
+}
+@media only screen and (max-width: 600px) {
+    .container {
+        width: 100%;
+        padding: 20px;
+        margin: 0 auto; /* Ensure horizontal centering */
+    }
+
+    .calculator-container {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .input-section,
+    .output-container {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .tip-container {
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+    }
+
+    .tip-container > input {
+        width: 100%;
+    }
+
+    .reset-btn {
+        margin-top: 30px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .input-wrapper input {
+        border: none;
+        background: none;
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: hsl(183, 100%, 15%);
+        width: 100%;
+        text-align: right;
+    }
+
+    .calculator-container {
+        gap: 15px;
+    }
+
+    .input-section,
+    .output-container {
+        width: 50%;
+        max-width: 100%;
+    }
+
+    .tip-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .tip-container > input {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .reset-btn {
+        font-size: 0.9rem;
+        padding: 0.75rem;
+    }
+
+    .amount h2 {
+        font-size: 0.9rem;
+    }
+
+    .amount span {
+        font-size: 1.5rem;
+    }
+
+
+    .tip-container {
+        gap: 20px 10px;
+    }
+
+    .tip-container > input {
+        font-size: 15px;
+        padding: 10px 0;
+    }
+}
