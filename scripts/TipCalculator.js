@@ -47,11 +47,11 @@ function collectUserInput() {
   }
 
   function resetOutput() {
-    let resetButton = document.querySelector(".reset-btn");
-    resetButton.addEventListener('click', function(){
+    // let resetButton = document.querySelector(".reset-btn");
+    // resetButton.addEventListener('click', function(){
         tipOutput.textContent = "0.00";
         totalOutput.textContent = "0.00";
-     })
+     // })
     }
 
 
